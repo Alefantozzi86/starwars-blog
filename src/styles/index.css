@@ -1,10 +1,10 @@
 body {
     background-image: url(https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg);
 background-repeat: no-repeat;
-background-size: 100% 100%;
-
-
+background-size:100% 100%;
+background-attachment: fixed;
 }
+
 .button-91 {
   color: #fff;
   padding: 15px 25px;
@@ -49,4 +49,15 @@ background-size: 100% 100%;
 p{
   color: white;
   text-indent: 10px;
+}
+
+.scroll{
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 2em;
+  background-color: transparent;
 }

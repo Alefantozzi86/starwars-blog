@@ -17,8 +17,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (!httpResponse.ok) {
 					  return;
 					}
-					const newData = await httpResponse.json();
-					newData.results.map(async (person) => {
+					const Data = await httpResponse.json();
+					Data.results.map(async (person) => {
 					  const response = await fetch(person.url);
 		  
 					  const newCharacter = await response.json();
