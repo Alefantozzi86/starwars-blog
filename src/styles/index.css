@@ -49,6 +49,7 @@ background-attachment: fixed;
 p{
   color: white;
   text-indent: 10px;
+  font-size:20px;
 }
 
 .scroll{
@@ -60,4 +61,9 @@ p{
   overflow-y: hidden;
   margin-top: 2em;
   background-color: transparent;
+}
+
+#sizeImagen{
+  max-height: 22rem;
+  object-fit: contain;
 }

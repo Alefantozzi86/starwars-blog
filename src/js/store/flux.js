@@ -4,7 +4,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			characters: [],
 			planets:[],
-			images: [],
 			favorites: [],
 		},
 
@@ -38,13 +37,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (!httpResponse.ok) {
 					  return;
 					}
-					const newData = await httpResponse.json();
-					newData.results.map(async (person) => {
+					const actualData= await httpResponse.json();
+					actualData.results.map(async (person) => {
 					  const response = await fetch(person.url);
 		  
-					  const newPlanet = await response.json();
+					  const actualPlanet = await response.json();
 					  setStore({
-						planets: [...store.planets, newPlanet],
+						planets: [...store.planets, actualPlanet],
 					  });
 					});
 				  } catch (error) {

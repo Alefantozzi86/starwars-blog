@@ -28,11 +28,11 @@ const SimpleCard = ({item, type, url}) =>{
 					<div className="d-flex justify-content-between">
 					{type == "characters" ? (
             			<>
-              				<a href="#" className="button-92 btn btn-outline-dark" onClick={() => navigate(`descriptionCharacters/${item.result.uid}`)}>Learn more!</a>
+              				<a href="#" className="button-92 btn btn-outline-dark" onClick={() => navigate(`character/${item.result.uid}`)}>Learn more!</a>
             			</>
           			) : (
             			<>
-							<a href="#" className="button-92 btn btn-outline-dark" onClick={() => navigate(`descriptionPlanets/${item.result.uid}`)}>Learn more!</a>
+							<a href="#" className="button-92 btn btn-outline-dark" onClick={() => navigate(`planet/${item.result.uid}`)}>Learn more!</a>
             			</>
           			)}
 						
