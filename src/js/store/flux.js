@@ -3,64 +3,64 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 		store: {
 			characters: [],
-			planets:[],
+			planets: [],
 			favorites: [],
 		},
 
 		actions: {
-			
-			getCharacters: async() =>{
+
+			getCharacters: async () => {
 				try {
-					const store = getStore(); 
+					const store = getStore();
 					const httpResponse = await fetch('https://www.swapi.tech/api/people/');
 					if (!httpResponse.ok) {
-					  return;
+						return;
 					}
-					const Data = await httpResponse.json();
-					Data.results.map(async (person) => {
-					  const response = await fetch(person.url);
-		  
-					  const newCharacter = await response.json();
-					  setStore({
-						characters: [...store.characters, newCharacter],
-					  });
+					const addData = await httpResponse.json();
+					addData.results.map(async (person) => {
+						const response = await fetch(person.url);
+
+						const addCharacter = await response.json();
+						setStore({
+							characters: [...store.characters, addCharacter],
+						});
 					});
-				  } catch (error) {
+				} catch (error) {
 					console.log(error);
 				}
-        	},
-
-			getPlanets: async() =>{
-				try {
-					const store = getStore(); 
-					const httpResponse = await fetch('https://www.swapi.tech/api/planets/');
-					if (!httpResponse.ok) {
-					  return;
-					}
-					const actualData= await httpResponse.json();
-					actualData.results.map(async (person) => {
-					  const response = await fetch(person.url);
-		  
-					  const actualPlanet = await response.json();
-					  setStore({
-						planets: [...store.planets, actualPlanet],
-					  });
-					});
-				  } catch (error) {
-					console.log(error);
-				}
-				
-        	},
-
-			addFavorites: (name)=>{
-				const store = getStore(); 
-				setStore({favorites: [...store.favorites, name]})
 			},
 
-			delFavorites: (name) =>{
+			getPlanets: async () => {
+				try {
+					const store = getStore();
+					const httpResponse = await fetch('https://www.swapi.tech/api/planets/');
+					if (!httpResponse.ok) {
+						return;
+					}
+					const addData = await httpResponse.json();
+					addData.results.map(async (person) => {
+						const response = await fetch(person.url);
+
+						const addPlanet = await response.json();
+						setStore({
+							planets: [...store.planets, addPlanet],
+						});
+					});
+				} catch (error) {
+					console.log(error);
+				}
+
+			},
+
+			addFavorites: (name) => {
 				const store = getStore();
-				let newFavorites = store.favorites.filter((item)=>item !== name);
-				setStore({favorites:newFavorites})
+				setStore({ favorites: [...store.favorites, name] })
+			},
+
+			delFavorites: (name) => {
+				const store = getStore();
+				let newFavorites = store.favorites.filter((item) => item !== name);
+				setStore({ favorites: newFavorites })
 			},
 		}
 	};

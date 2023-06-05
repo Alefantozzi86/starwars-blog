@@ -10,7 +10,7 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			
+
 		</div>
 	);
 };
