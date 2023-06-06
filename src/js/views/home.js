@@ -27,7 +27,7 @@ const Home = () => {
 						<h1>Planets</h1>
 						<div className="row scroll scrollbar">
 							{
-								store.characters.map((planet) => (
+								store.planets.map((planet) => (
 									<SimpleCard key={planet.result._id} item={planet} type={"planets"} />
 								))}
 						</div>
