@@ -28,34 +28,34 @@ export const DescriptionCharacters = () => {
 				</div>
 				<div className="col-6 text-start text-warning">
 					<h1 className="p-4 mb-3">{actualPage?.result.properties.name}</h1>
-					<p className="p-2">{actualPage?.result.description} </p> <p>The famous Star Wars saga by director George Lucas. The saga centers on his knowledge of the Force, his fall to the Dark side, and ultimately his redemption and death.</p>
+					<p className="description p-2 text-white">{actualPage?.result.description} </p> <p className="description text-white">The famous Star Wars saga by director George Lucas. The saga centers on his knowledge of the Force, his fall to the Dark side, and ultimately his redemption and death.</p>
 				</div>
 			</div>
 			<div className="container">
 				<div className="row text-warning border-top border-warning">
 					<div className="col">
 						<h3>Gender:</h3>
-						<p className="text-white ps-1">{actualPage?.result.properties.gender}</p>
+						<p className="description text-white ps-1">{actualPage?.result.properties.gender}</p>
 					</div>
 					<div className="col">
 						<h3>Height</h3>
-						<p className="text-white ps-1">{actualPage?.result.properties.height}</p>
+						<p className="description text-white ps-1">{actualPage?.result.properties.height}</p>
 					</div>
 					<div className="col">
 						<h3>Hair color</h3>
-						<p className="text-white ps-1">{actualPage?.result.properties.hair_color}</p>
+						<p className="description text-white ps-1">{actualPage?.result.properties.hair_color}</p>
 					</div>
 					<div className="col">
 						<h3>Eye color</h3>
-						<p className="text-white ps-1">{actualPage?.result.properties.eye_color}</p>
+						<p className="description text-white ps-1">{actualPage?.result.properties.eye_color}</p>
 					</div>
 					<div className="col">
 						<h3>Birth year</h3>
-						<p className="text-white ps-1">{actualPage?.result.properties.birth_year}</p>
+						<p className="description text-white ps-1">{actualPage?.result.properties.birth_year}</p>
 					</div>
 					<div className="col">
 						<h3>Gender</h3>
-						<p className="text-white ps-1">{actualPage?.result.properties.gender}</p>
+						<p className="description text-white ps-1">{actualPage?.result.properties.gender}</p>
 					</div>
 				</div>
 			</div>

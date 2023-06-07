@@ -56,11 +56,12 @@ background-attachment: fixed;
  
 }
 
+/*
 p{
   color: white;
   text-indent: 10px;
   font-size:20px;
-}
+}*/
 
 .scroll{
   align-items: stretch;
@@ -76,4 +77,9 @@ p{
 #sizeImagen{
   max-height: 22rem;
   object-fit: contain;
+}
+
+.description{
+  font-size: 20px;
+  text-transform: capitalize;
 }
